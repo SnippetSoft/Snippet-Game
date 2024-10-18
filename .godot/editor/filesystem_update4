@@ -1,0 +1,10 @@
+res://Gameplay/Levels/level1.tscn
+res://Menus/start_screen.tscn
+res://Gameplay/player.tscn
+res://Gameplay/Levels/level2.tscn
+res://Gameplay/Levels/tileset.tres
+res://Gameplay/player.gd
+res://Gameplay/gameplay.tscn
+res://Gameplay/Levels/level3.tscn
+res://Gameplay/Levels/level.gd
+res://Gameplay/Levels/basement.tscn

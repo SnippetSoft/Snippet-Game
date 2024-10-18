@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4k1r366hh84x"]
+
+[ext_resource type="Script" path="res://Gameplay/Levels/level.gd" id="1_nk73a"]
+[ext_resource type="Texture2D" uid="uid://bf4bylejrm3h0" path="res://Gameplay/Sprites/BGs/Room1.png" id="2_0l1nl"]
+[ext_resource type="PackedScene" uid="uid://blc8pts5kgsl0" path="res://Gameplay/player.tscn" id="2_pgpya"]
+[ext_resource type="PackedScene" uid="uid://b0o33vveq8wx5" path="res://Gameplay/door.tscn" id="3_40px8"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ufprm"]
+vertices = PackedVector2Array(172.391, 48.1563, 200, 51.0234, 200, 135, 10, 135, 162.547, 49.8438, 10, 52.7969, 166.523, 25, 168.531, 25)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 4), PackedInt32Array(0, 4, 6, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 43, 154, 40, 158, 15, 177, 15, 181, 39, 210, 42, 210, 145, 0, 145)])
+
+[node name="Level1" type="Node2D" node_paths=PackedStringArray("player", "doors")]
+script = ExtResource("1_nk73a")
+player = NodePath("Player")
+doors = [NodePath("WestDoor"), NodePath("BasementDoor")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, 73)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_0l1nl")
+
+[node name="Player" parent="." instance=ExtResource("2_pgpya")]
+position = Vector2(64, 72)
+
+[node name="WestDoor" parent="." instance=ExtResource("3_40px8")]
+position = Vector2(8, 72)
+entry_direction = 1
+transition_type = "no_transition"
+path_to_new_scene = "res://Gameplay/Levels/level2.tscn"
+entry_door_name = "EastDoor"
+
+[node name="BasementDoor" parent="." instance=ExtResource("3_40px8")]
+position = Vector2(168, 24)
+entry_direction = 2
+transition_type = "fade_to_black"
+path_to_new_scene = "res://Gameplay/Levels/basement.tscn"
+entry_door_name = "BasementExit"
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." groups=["navRegions"]]
+navigation_polygon = SubResource("NavigationPolygon_ufprm")
