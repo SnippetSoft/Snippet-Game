@@ -1,0 +1,30 @@
+Art:
+Backgrounds
+CGs (Can be literally just the end screen)
+Props
+UI
+NPCs (If the NPCs are all Snippets, tons of reused assets with just different hats or whatever)
+Character (playable Snippet = more reused assets for the NPCs)
+Animations (Some games like Harvester had 0 frames of animation for most interactions. Player would need limited animations)
+Talking Heads (Optional. If its all Snippets, its all reused with a funny hat or whatever.)
+Puzzles (Can be very simplified. Actually probably really easy with free assets available for Godot)
+Cursor (Grab, Speak, Look, Move, Change Scene. Might find a free one)
+
+Sounds:
+SFX - Can be stock sounds. I'm sure there's a bunch freely available with Godot
+Music - Can be stock music/existing music/VAllure's BGM
+
+Writing:
+General gameplay progression
+Puzzle making
+Snippet dialogue
+Item description/interaction text
+Nothing needs to be voiced
+
+Programming:
+There is a ton of steps to go on in here but I'll oversimplify it
+Pathing (easy if linear paths)
+Inventory
+Interaction
+Puzzles
+Text Boxes (Part of Interaction but whatever

@@ -1,5 +1,5 @@
-NavigationObstacle2D
 NavigationRegion2D
+NavigationObstacle2D
 NavigationAgent2D
 Sprite2D
 AnimatedSprite2D
