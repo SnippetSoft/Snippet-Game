@@ -1,4 +1,7 @@
-res://Gameplay/Levels/level3.tscn
 res://Gameplay/Levels/tileset.tres
-res://Gameplay/player.tscn
-res://Gameplay/Levels/level2.tscn
+res://Gameplay/Inventory/main.tscn
+res://Gameplay/gameplay.tscn
+res://Gameplay/Inventory/Inventory Slot.tscn
+res://Gameplay/Inventory/inventory_slot.gd
+res://Gameplay/Inventory/equipment_summary.gd
+res://Gameplay/Inventory/inventory_item.gd

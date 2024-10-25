@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://omrbcqucf8vq"]
+
+[ext_resource type="Script" path="res://Gameplay/Inventory/inventory_slot.gd" id="1_v4atl"]
+
+[node name="InventorySlot" type="PanelContainer"]
+custom_minimum_size = Vector2(16, 16)
+script = ExtResource("1_v4atl")
+type = 6

@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d0w5ox30bfojf"]
 
-[ext_resource type="Texture2D" uid="uid://dxak7fhyglnlu" path="res://Gameplay/Sprites/tilemap_packed.png" id="1_ku6cs"]
+[ext_resource type="Texture2D" uid="uid://dxak7fhyglnlu" path="res://Gameplay/Sprites/Tilemaps/tilemap_packed.png" id="1_t2fn0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0ua8"]
-texture = ExtResource("1_ku6cs")
+texture = ExtResource("1_t2fn0")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.9375, 8, 8, 8, 8, 1, 1.9375, 1)

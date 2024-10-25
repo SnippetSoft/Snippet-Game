@@ -1,0 +1,7 @@
+Thank you to the following public asset libraries and templates used for the development of this project.
+
+Scene Manager+ by Bacon and Games - https://baconandgames.itch.io/scene-manager-source-code
+
+Inventory system by Jonw9027 - https://godotengine.org/asset-library/asset/2176
+
+Rogue Fantasy "Catacombs" by szadi art - https://szadiart.itch.io/rogue-fantasy-catacombs

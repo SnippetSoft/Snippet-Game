@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://gwxoou8p7203"]
+[gd_scene load_steps=6 format=3 uid="uid://gwxoou8p7203"]
 
 [ext_resource type="Script" path="res://Gameplay/gameplay.gd" id="1_5mffn"]
-[ext_resource type="Texture2D" uid="uid://cufg7jn2mco77" path="res://Gameplay/Sprites/heart-small.png" id="1_x5sij"]
 [ext_resource type="PackedScene" uid="uid://b4k1r366hh84x" path="res://Gameplay/Levels/level1.tscn" id="2_7rnvs"]
+[ext_resource type="PackedScene" uid="uid://omrbcqucf8vq" path="res://Gameplay/Inventory/Inventory Slot.tscn" id="3_e3ohi"]
+[ext_resource type="Texture2D" uid="uid://jg0utwfii1v5" path="res://Gameplay/Inventory/sprites/Item__68.png" id="4_61toh"]
+[ext_resource type="Script" path="res://Gameplay/Inventory/inventory_item.gd" id="5_khkup"]
 
 [node name="Gameplay" type="Node2D" groups=["gameplay"]]
 script = ExtResource("1_5mffn")
@@ -19,25 +21,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
+offset_right = 83.0
+offset_bottom = 16.0
 
-[node name="GridContainer" type="GridContainer" parent="HUD/MarginContainer"]
+[node name="InventorySlot" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
 layout_mode = 2
-columns = 3
 
-[node name="Heart" type="TextureRect" parent="HUD/MarginContainer/GridContainer"]
+[node name="Key" type="TextureRect" parent="HUD/HBoxContainer/InventorySlot"]
 layout_mode = 2
-texture = ExtResource("1_x5sij")
+texture = ExtResource("4_61toh")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_khkup")
+type = 4
+lore = "Unlocks Doors"
+itemName = "Key"
 
-[node name="Heart2" type="TextureRect" parent="HUD/MarginContainer/GridContainer"]
+[node name="InventorySlot2" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
 layout_mode = 2
-texture = ExtResource("1_x5sij")
 
-[node name="Heart3" type="TextureRect" parent="HUD/MarginContainer/GridContainer"]
+[node name="InventorySlot3" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
 layout_mode = 2
-texture = ExtResource("1_x5sij")
