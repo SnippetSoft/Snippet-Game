@@ -1,15 +1,16 @@
 extends TextureRect
 class_name InventoryItem
 
-
-enum Type {HEAD, CHEST, LEGS, FEET, WEAPON, ACCESSORY, MAIN}
+#Look - Temporary, but to observe items in inventory. Potentially in environment
+#Tool - For items that are used, such as keys
+#Main - Needs to stay so the blank inventory slots can still function
+#If more are needed they can be implemented, but I think this should cover all cases.
+enum Type {LOOK, TOOL, MAIN}
 
 @export var type: Type
 @export var lore: String
-
 @export var itemName: String
-# this variable is the means to summarize the equipment piece, however it is important to do same in equipment summary
-var equipmentsum = [1,1,1,1,1,1,1,1,1,1]
+
 # Custom init function so that it doesn't error
 func init(t: Type, i: Texture2D, x: String, s:String) -> void:
 	type = t

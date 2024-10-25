@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://gwxoou8p7203"]
+[gd_scene load_steps=7 format=3 uid="uid://gwxoou8p7203"]
 
 [ext_resource type="Script" path="res://Gameplay/gameplay.gd" id="1_5mffn"]
 [ext_resource type="PackedScene" uid="uid://b4k1r366hh84x" path="res://Gameplay/Levels/level1.tscn" id="2_7rnvs"]
 [ext_resource type="PackedScene" uid="uid://omrbcqucf8vq" path="res://Gameplay/Inventory/Inventory Slot.tscn" id="3_e3ohi"]
 [ext_resource type="Texture2D" uid="uid://jg0utwfii1v5" path="res://Gameplay/Inventory/sprites/Item__68.png" id="4_61toh"]
+[ext_resource type="Texture2D" uid="uid://b06opqefewt8h" path="res://Gameplay/Inventory/sprites/eyes emoji.png" id="4_utckd"]
 [ext_resource type="Script" path="res://Gameplay/Inventory/inventory_item.gd" id="5_khkup"]
 
 [node name="Gameplay" type="Node2D" groups=["gameplay"]]
@@ -28,19 +29,31 @@ offset_bottom = 16.0
 
 [node name="InventorySlot" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
 layout_mode = 2
+type = 0
 
-[node name="Key" type="TextureRect" parent="HUD/HBoxContainer/InventorySlot"]
+[node name="Look" type="TextureRect" parent="HUD/HBoxContainer/InventorySlot"]
+layout_mode = 2
+texture = ExtResource("4_utckd")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_khkup")
+lore = "Drag onto items to observe"
+itemName = "Look"
+
+[node name="InventorySlot2" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
+layout_mode = 2
+type = 2
+
+[node name="Key" type="TextureRect" parent="HUD/HBoxContainer/InventorySlot2"]
 layout_mode = 2
 texture = ExtResource("4_61toh")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("5_khkup")
-type = 4
+type = 1
 lore = "Unlocks Doors"
 itemName = "Key"
 
-[node name="InventorySlot2" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
-layout_mode = 2
-
 [node name="InventorySlot3" parent="HUD/HBoxContainer" instance=ExtResource("3_e3ohi")]
 layout_mode = 2
+type = 2

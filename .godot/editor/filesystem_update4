@@ -1,7 +1,7 @@
-res://Gameplay/Levels/tileset.tres
-res://Gameplay/Inventory/main.tscn
 res://Gameplay/gameplay.tscn
-res://Gameplay/Inventory/Inventory Slot.tscn
-res://Gameplay/Inventory/inventory_slot.gd
+res://Gameplay/Levels/tileset.tres
 res://Gameplay/Inventory/equipment_summary.gd
+res://Gameplay/Inventory/Inventory Slot.tscn
+res://Gameplay/Inventory/main.tscn
 res://Gameplay/Inventory/inventory_item.gd
+res://Gameplay/Inventory/inventory_slot.gd

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729855380
+::res://::1729857170
 Asset Credits.txt::TextFile::-1::1729854749::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1728942648::0::1::::<><>::
 icon.svg::CompressedTexture2D::4346435169413834745::1728942648::1728942697::1::::<><>::
@@ -7,17 +7,19 @@ README.md::TextFile::-1::1729221594::0::1::::<><>::
 TO DO.txt::TextFile::-1::1729221603::0::1::::<><>::
 ::res://Autoloads/::1728944556
 SceneManager.gd::GDScript::-1::1728942647::0::1::::<>Node<>::
-::res://Gameplay/::1729855473
+::res://Gameplay/::1729857997
 door.gd::GDScript::-1::1728942648::0::1::::Door<>Area2D<>::
 door.tscn::PackedScene::4171794276863237708::1728942648::0::1::::<><>::res://Gameplay/door.gd
 gameplay.gd::GDScript::-1::1729855332::0::1::::Gameplay<>Node2D<>::
-gameplay.tscn::PackedScene::467971632109500778::1729855344::0::1::::<><>::res://Gameplay/gameplay.gd<>uid://b4k1r366hh84x::::res://Gameplay/Levels/level1.tscn
+gameplay.tscn::PackedScene::467971632109500778::1729857997::0::1::::<><>::res://Gameplay/gameplay.gd<>uid://b4k1r366hh84x::::res://Gameplay/Levels/level1.tscn<>uid://omrbcqucf8vq::::res://Gameplay/Inventory/Inventory Slot.tscn<>uid://jg0utwfii1v5::::res://Gameplay/Inventory/sprites/Item__68.png<>res://Gameplay/Inventory/inventory_item.gd
 player.gd::GDScript::-1::1728953092::0::1::::Player<>CharacterBody2D<>::
 player.tscn::PackedScene::3164658194016258919::1729854047::0::1::::<><>::res://Gameplay/player.gd<>uid://dujsrqga5hmxa::::res://Gameplay/Sprites/shadow.png<>uid://dd2fcfn338wki::::res://Gameplay/Sprites/Chars/snippet.png
-::res://Gameplay/Inventory/::1729855501
-main.tscn::PackedScene::4069023762615999627::1729855478::0::1::::<><>::
-::res://Gameplay/Inventory/sprites/::1729855501
-character.png::CompressedTexture2D::5090236173656713608::1729854888::1729855505::1::::<><>::
+::res://Gameplay/Inventory/::1729857997
+Inventory Slot.tscn::PackedScene::1008450449327292966::1729857967::0::1::::<><>::res://Gameplay/Inventory/inventory_slot.gd
+inventory_item.gd::GDScript::-1::1729857997::0::1::::InventoryItem<>TextureRect<>::
+inventory_slot.gd::GDScript::-1::1729857784::0::1::::InventorySlot<>PanelContainer<>::
+::res://Gameplay/Inventory/sprites/::1729858210
+eyes emoji.png::CompressedTexture2D::4206015156613297861::1729858210::1729858217::1::::<><>::
 Item__01.png::CompressedTexture2D::2134840417128290046::1729854888::1729855505::1::::<><>::
 Item__16.png::CompressedTexture2D::6763215673456365323::1729854888::1729855505::1::::<><>::
 Item__29.png::CompressedTexture2D::7449248577881102745::1729854888::1729855505::1::::<><>::
@@ -26,7 +28,7 @@ Item__44.png::CompressedTexture2D::3263494870441864851::1729854888::1729855505::
 Item__48.png::CompressedTexture2D::8292437007750489880::1729854888::1729855505::1::::<><>::
 Item__57.png::CompressedTexture2D::1672618919993496572::1729854888::1729855505::1::::<><>::
 Item__68.png::CompressedTexture2D::645640532131472560::1729854888::1729855505::1::::<><>::
-::res://Gameplay/Levels/::1729855478
+::res://Gameplay/Levels/::1729857301
 basement.tscn::PackedScene::1456997613029503038::1729854039::0::1::::<><>::uid://dxak7fhyglnlu::::res://Gameplay/Sprites/Tilemaps/tilemap_packed.png<>res://Gameplay/Levels/level.gd<>uid://blc8pts5kgsl0::::res://Gameplay/player.tscn<>uid://b0o33vveq8wx5::::res://Gameplay/door.tscn
 data_handoff.tscn::PackedScene::6162092468841767098::1728942648::0::1::::<><>::
 level1.tscn::PackedScene::4444151447005856957::1729854776::0::1::::<><>::res://Gameplay/Levels/level.gd<>uid://blc8pts5kgsl0::::res://Gameplay/player.tscn<>uid://b0o33vveq8wx5::::res://Gameplay/door.tscn<>uid://d0w5ox30bfojf::::res://Gameplay/Levels/tileset.tres
@@ -34,7 +36,7 @@ level2.tscn::PackedScene::1184479750319511661::1729854776::0::1::::<><>::res://G
 level3.tscn::PackedScene::2129507359724005136::1729221306::0::1::::<><>::res://Gameplay/Levels/level.gd<>uid://d0w5ox30bfojf::::res://Gameplay/Levels/tileset.tres<>uid://blc8pts5kgsl0::::res://Gameplay/player.tscn<>uid://b0o33vveq8wx5::::res://Gameplay/door.tscn
 level.gd::GDScript::-1::1728953021::0::1::::Level<>Node2D<>::
 level_data_handoff.gd::GDScript::-1::1728942648::0::1::::LevelDataHandoff<>Node<>::
-tileset.tres::TileSet::8961247215946102215::1729855478::0::1::::<><>::uid://dxak7fhyglnlu::::res://Gameplay/Sprites/Tilemaps/tilemap_packed.png
+tileset.tres::TileSet::8961247215946102215::1729857301::0::1::::<><>::uid://dxak7fhyglnlu::::res://Gameplay/Sprites/Tilemaps/tilemap_packed.png
 ::res://Gameplay/Sprites/::1729854888
 heart-small.png::CompressedTexture2D::6187362070314201224::1728942648::1728942697::1::::<><>::
 shadow.png::CompressedTexture2D::8582742437675477078::1728942648::1729854048::1::::<><>::
