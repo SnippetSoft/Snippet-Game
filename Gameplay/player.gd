@@ -41,8 +41,9 @@ func makepath(targetPos):
 func _input(event):
 	if inputEnabled and Input.is_action_just_pressed("ui_leftMouseClick"):
 		clickPos = get_global_mouse_position()
-		animatedSprite.play("move")
-		makepath(clickPos)
+		if clickPos.y > 16:
+			animatedSprite.play("move")
+			makepath(clickPos)
 
 func disable():
 	inputEnabled = false

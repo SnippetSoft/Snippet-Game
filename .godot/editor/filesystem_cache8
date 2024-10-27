@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729857170
+::res://::1730071162
 Asset Credits.txt::TextFile::-1::1729854749::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1728942648::0::1::::<><>::
 icon.svg::CompressedTexture2D::4346435169413834745::1728942648::1728942697::1::::<><>::
@@ -7,18 +7,18 @@ README.md::TextFile::-1::1729221594::0::1::::<><>::
 TO DO.txt::TextFile::-1::1729221603::0::1::::<><>::
 ::res://Autoloads/::1728944556
 SceneManager.gd::GDScript::-1::1728942647::0::1::::<>Node<>::
-::res://Gameplay/::1729857997
+::res://Gameplay/::1729859401
 door.gd::GDScript::-1::1728942648::0::1::::Door<>Area2D<>::
 door.tscn::PackedScene::4171794276863237708::1728942648::0::1::::<><>::res://Gameplay/door.gd
 gameplay.gd::GDScript::-1::1729855332::0::1::::Gameplay<>Node2D<>::
-gameplay.tscn::PackedScene::467971632109500778::1729857997::0::1::::<><>::res://Gameplay/gameplay.gd<>uid://b4k1r366hh84x::::res://Gameplay/Levels/level1.tscn<>uid://omrbcqucf8vq::::res://Gameplay/Inventory/Inventory Slot.tscn<>uid://jg0utwfii1v5::::res://Gameplay/Inventory/sprites/Item__68.png<>res://Gameplay/Inventory/inventory_item.gd
+gameplay.tscn::PackedScene::467971632109500778::1729859401::0::1::::<><>::res://Gameplay/gameplay.gd<>uid://b4k1r366hh84x::::res://Gameplay/Levels/level1.tscn<>uid://omrbcqucf8vq::::res://Gameplay/Inventory/Inventory Slot.tscn<>uid://jg0utwfii1v5::::res://Gameplay/Inventory/sprites/Item__68.png<>uid://b06opqefewt8h::::res://Gameplay/Inventory/sprites/eyes emoji.png<>res://Gameplay/Inventory/inventory_item.gd
 player.gd::GDScript::-1::1728953092::0::1::::Player<>CharacterBody2D<>::
 player.tscn::PackedScene::3164658194016258919::1729854047::0::1::::<><>::res://Gameplay/player.gd<>uid://dujsrqga5hmxa::::res://Gameplay/Sprites/shadow.png<>uid://dd2fcfn338wki::::res://Gameplay/Sprites/Chars/snippet.png
-::res://Gameplay/Inventory/::1729857997
-Inventory Slot.tscn::PackedScene::1008450449327292966::1729857967::0::1::::<><>::res://Gameplay/Inventory/inventory_slot.gd
-inventory_item.gd::GDScript::-1::1729857997::0::1::::InventoryItem<>TextureRect<>::
-inventory_slot.gd::GDScript::-1::1729857784::0::1::::InventorySlot<>PanelContainer<>::
-::res://Gameplay/Inventory/sprites/::1729858210
+::res://Gameplay/Inventory/::1729859400
+Inventory Slot.tscn::PackedScene::1008450449327292966::1729858793::0::1::::<><>::res://Gameplay/Inventory/inventory_slot.gd
+inventory_item.gd::GDScript::-1::1729858898::0::1::::InventoryItem<>TextureRect<>::
+inventory_slot.gd::GDScript::-1::1729859400::0::1::::InventorySlot<>PanelContainer<>::
+::res://Gameplay/Inventory/sprites/::1729858217
 eyes emoji.png::CompressedTexture2D::4206015156613297861::1729858210::1729858217::1::::<><>::
 Item__01.png::CompressedTexture2D::2134840417128290046::1729854888::1729855505::1::::<><>::
 Item__16.png::CompressedTexture2D::6763215673456365323::1729854888::1729855505::1::::<><>::

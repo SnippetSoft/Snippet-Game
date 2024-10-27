@@ -21,7 +21,10 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 				return true
 			else:
 				# Swap two items
-				return get_child(0).type == data.type
+				if data.type == InventoryItem.Type.LOOK:
+					return true
+				else:
+					return get_child(0).type == data.type
 		elif type == InventoryItem.Type.LOOK:
 				return true
 		else:
