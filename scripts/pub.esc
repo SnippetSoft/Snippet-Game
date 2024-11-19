@@ -1,0 +1,4 @@
+:setup
+play_snd res://assests/music/X5tUKUl.mp3 _music
+> [eq ESC_LAST_SCENE park]
+	teleport player pub_exit

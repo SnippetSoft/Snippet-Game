@@ -1,0 +1,4 @@
+:exit_scene
+say player "I'll head out now."
+play_snd res://assests/sounds/power_up.wav
+change_scene "res://scenes/Park.tscn"

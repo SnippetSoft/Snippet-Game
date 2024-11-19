@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/scenes/esc_prompt/esc_prompt_popup.gd" type="Script" id=1]
+
+[node name="esc_prompt_popup" type="WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 68.0
+margin_right = -617.0
+margin_bottom = -456.0
+window_title = "ESC debug prompt"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="past_actions" type="TextEdit" parent="VBoxContainer"]
+margin_right = 599.0
+margin_bottom = 340.0
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 344.0
+margin_right = 599.0
+margin_bottom = 348.0
+
+[node name="command" type="LineEdit" parent="VBoxContainer"]
+margin_top = 352.0
+margin_right = 599.0
+margin_bottom = 376.0
+caret_blink = true
+
+[connection signal="about_to_show" from="." to="." method="_on_esc_prompt_popup_about_to_show"]
+[connection signal="text_entered" from="VBoxContainer/command" to="." method="_on_command_text_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/time_for_adventure.mp3-c80d3fdf58f6bee51ac87a75694bda7a.mp3str"
+
+[deps]
+
+source_file="res://assests/music/time_for_adventure.mp3"
+dest_files=[ "res://.import/time_for_adventure.mp3-c80d3fdf58f6bee51ac87a75694bda7a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

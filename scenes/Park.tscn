@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=3]
+[ext_resource path="res://assests/sprites/park_lightmap.png" type="Texture" id=4]
+[ext_resource path="res://assests/sprites/park_bg.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Player.scn" type="PackedScene" id=6]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=7]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_exit.gd" type="Script" id=8]
+[ext_resource path="res://scenes/BleatingHeart.scn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 2518, 654, 3174, 654, 3145, 696, 2493, 698, -1, 889, 0, 652, 942, 654, 914, 696, 272, 893, 1597, 894, 1140, 695, 1168, 653, 2027, 653, 2088, 697, 3410, 653, 3770, 653, 3774, 892, 3436, 894, 3378, 696 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 8, 7, 10 ), PoolIntArray( 9, 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17, 18 ), PoolIntArray( 2, 18, 17, 9, 3 ), PoolIntArray( 9, 13, 3 ) ]
+outlines = [ PoolVector2Array( 0, 652, 942, 654, 914, 696, 1140, 695, 1168, 653, 2027, 653, 2088, 697, 2493, 698, 2518, 654, 3174, 654, 3145, 696, 3378, 696, 3410, 653, 3770, 653, 3774, 892, 3436, 894, 1597, 894, 272, 893, -1, 889 ) ]
+
+[node name="Park" type="Node2D"]
+script = ExtResource( 1 )
+global_id = "park"
+esc_script = "res://scripts/park.esc"
+player_scene = ExtResource( 6 )
+
+[node name="ESCBackground" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+
+[node name="ESCTerrain" type="Navigation2D" parent="."]
+script = ExtResource( 3 )
+lightmap = ExtResource( 4 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
+navpoly = SubResource( 1 )
+
+[node name="ESCExit" type="Area2D" parent="."]
+script = ExtResource( 8 )
+global_id = "exit_to_pub"
+tooltip_name = "Enter Pub"
+target_scene = "res://scenes/Pub.tscn"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ESCExit"]
+polygon = PoolVector2Array( 0, 0, 0, 921, 266, 921, 265, 0 )
+
+[node name="ESCLocation" type="Position2D" parent="ESCExit"]
+position = Vector2( 55, 726 )
+script = ExtResource( 7 )
+global_id = "park_exit"
+
+[node name="Bleating Heart" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3005, 685 )
+scale = Vector2( 0.098, 0.098 )
+
+[node name="ESCLocation" type="Position2D" parent="Bleating Heart"]
+position = Vector2( -1806.12, 500 )
+script = ExtResource( 7 )

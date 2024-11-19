@@ -1,0 +1,4 @@
+:setup
+play_snd res://assests/music/time_for_adventure.mp3 _music
+> [eq ESC_LAST_SCENE pub]
+	teleport player park_exit

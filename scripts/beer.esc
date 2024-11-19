@@ -1,0 +1,5 @@
+:look
+say player "I love root beer."
+:pickup
+inventory_add beer
+set_active beer false

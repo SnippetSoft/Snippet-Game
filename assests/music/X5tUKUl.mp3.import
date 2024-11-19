@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/X5tUKUl.mp3-32e77681091b78581e82b12b0bc8032a.mp3str"
+
+[deps]
+
+source_file="res://assests/music/X5tUKUl.mp3"
+dest_files=[ "res://.import/X5tUKUl.mp3-32e77681091b78581e82b12b0bc8032a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

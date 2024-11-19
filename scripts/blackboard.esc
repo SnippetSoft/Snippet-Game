@@ -1,0 +1,10 @@
+:look
+#If root beer has been picked up
+> [i/beer]
+	say player "I hope this counts..."
+#If root beer hasn't been picked up
+> [!i/beer]
+	say player "Mocktails for me, please."
+
+:use beer
+say player "I'm not throwing my mug away."

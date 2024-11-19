@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=3]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=4]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=5]
+[ext_resource path="res://assests/sprites/barrels_fg.png" type="Texture" id=6]
+[ext_resource path="res://assests/sprites/pub_bg.png" type="Texture" id=7]
+[ext_resource path="res://items/Beer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Player.scn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 682, 895, 539, 830, 506, 776, 816, 799, 917, 878, 1475, 717, 1702, 704, 1695, 909, 1479, 859, 691, 957, 1041, 930, 3431, 956, 1972, 934, 1360, 920, 2832, 783, 2991, 725, 3227, 749, 2726, 847, 1203, 873, 2138, 883, 2275, 921, 1820, 893, 2520, 891 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 0, 4, 10 ), PoolIntArray( 11, 9, 10, 12 ), PoolIntArray( 13, 8, 7 ), PoolIntArray( 14, 15, 16, 11, 17 ), PoolIntArray( 10, 18, 13 ), PoolIntArray( 12, 19, 20 ), PoolIntArray( 7, 21, 12 ), PoolIntArray( 22, 17, 11 ), PoolIntArray( 20, 22, 11 ), PoolIntArray( 13, 7, 12 ), PoolIntArray( 12, 20, 11 ), PoolIntArray( 12, 10, 13 ) ]
+outlines = [ PoolVector2Array( 3227, 749, 3431, 956, 691, 957, 682, 895, 539, 830, 506, 776, 816, 799, 917, 878, 1041, 930, 1203, 873, 1360, 920, 1479, 859, 1475, 717, 1702, 704, 1695, 909, 1820, 893, 1972, 934, 2138, 883, 2275, 921, 2520, 891, 2726, 847, 2832, 783, 2991, 725 ) ]
+
+[node name="Pub" type="Node2D"]
+script = ExtResource( 1 )
+global_id = "pub"
+esc_script = "res://scripts/pub.esc"
+player_scene = ExtResource( 9 )
+camera_limits = [ Rect2( 0, 0, 3975, 956 ) ]
+
+[node name="ESCBackground" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 7 )
+script = ExtResource( 3 )
+
+[node name="ESCTerrain" type="Navigation2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
+navpoly = SubResource( 1 )
+
+[node name="start" type="Position2D" parent="."]
+position = Vector2( 1597, 747 )
+script = ExtResource( 2 )
+global_id = "start"
+is_start_location = true
+
+[node name="Blackboard" type="Area2D" parent="."]
+pause_mode = 1
+script = ExtResource( 5 )
+global_id = "blackboard"
+esc_script = "res://scripts/blackboard.esc"
+tooltip_name = "This is a tool tip!"
+combine_when_selected_action_is_in = [  ]
+animations = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Blackboard"]
+polygon = PoolVector2Array( 1168, 377, 1176, 115, 1027, 92, 1026, 369 )
+
+[node name="ESCLocation" type="Position2D" parent="Blackboard"]
+position = Vector2( 1211, 920 )
+script = ExtResource( 2 )
+
+[node name="Barrels" type="Area2D" parent="."]
+pause_mode = 1
+script = ExtResource( 5 )
+combine_when_selected_action_is_in = [  ]
+inventory_texture = ExtResource( 6 )
+animations = null
+
+[node name="Sprite" type="Sprite" parent="Barrels"]
+position = Vector2( 3054, 824 )
+z_index = 1000
+texture = ExtResource( 6 )
+
+[node name="Beer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1966, 430 )
+scale = Vector2( 0.227, 0.227 )
+
+[node name="ESCLocation" type="Position2D" parent="Beer"]
+position = Vector2( -700.441, 2237.89 )
+script = ExtResource( 2 )
+
+[node name="Door" type="Area2D" parent="."]
+pause_mode = 1
+script = ExtResource( 5 )
+global_id = "pub_door_item"
+esc_script = "res://scripts/pub_exit.esc"
+is_exit = true
+tooltip_name = "Exit Pub"
+combine_when_selected_action_is_in = [  ]
+animations = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door"]
+polygon = PoolVector2Array( 3226, 749, 3220, 261, 2987, 267, 2983, 722 )
+
+[node name="ESCLocation" type="Position2D" parent="Door"]
+position = Vector2( 3048, 777 )
+script = ExtResource( 2 )
+global_id = "pub_exit"

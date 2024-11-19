@@ -1,0 +1,31 @@
+:look
+say player "A friendly bleating heart."
+
+:talk
+> [!talked_once]
+	turn_to bleating_heart player
+	say bleating_heart "Hello, Snippet."
+	set_global talked_once true
+> [!beer_given]
+	set_global beer_conversation_done false
+	say bleating_heart "I'm so thirsty..."
+	?
+		- "I have something for you." [!beer_conversation_done]
+			say player "I have something for you."
+			say bleating_heart "Truly? I'm very thankful, hand it over."
+			set_global beer_conversation_done true
+			stop
+		- "I don't have anything." [!beer_conversation_done]
+			say player "I don't have anything."
+			say bleating_heart "Oh, okay..."
+			set_global beer_conversation_done true
+		- "Goodbye."
+			say player "Goodbye."
+			say bleating_heart "Bye."
+			stop
+	!
+
+:use beer
+say bleating_heart "Thank you so much!"
+inventory_remove beer
+set_global beer_given true
